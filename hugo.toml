@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://yadl.in/"
+baseURL = "https://mr-sagar-shelar.github.io/yadl-website"
 # Title of your website (required).
 title = "YADL"
 # Your theme name
