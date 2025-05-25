@@ -16,7 +16,8 @@
     "project-setup": "node ./scripts/projectSetup.js",
     "theme-setup": "node ./scripts/themeSetup.js",
     "update-theme": "node ./scripts/themeUpdate.js",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "copy:coi-serviceworker": "shx cp -f ./node_modules/coi-serviceworker/coi-serviceworker.js ./public/coi-serviceworker.js"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.6",
@@ -26,5 +27,9 @@
     "prettier-plugin-go-template": "0.0.15",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.1.6"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
