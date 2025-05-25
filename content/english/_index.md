@@ -1,51 +1,56 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Hugo Project"
-  content: "Hugoplate is a free starter template built with Hugo and TailwindCSS, providing everything you need to jumpstart your Hugo project and save valuable time."
+  title: "Create Stunning Diagrams Instantly with YADL – The Free, Open-Source Diagramming Language"
+  content: "Design, Preview, and Export Diagrams Directly from Your Browser – No Sign-Up Required."
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/hugoplate"
+    label: "Start Creating Diagrams Now"
+    link: "/playground"
 
 # Features
 features:
-  - title: "What's Included in Hugoplate"
+  - title: "Why YADL?"
     image: "/images/service-1.png"
-    content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
+    content: "YADL is designed to support a wide range of diagramming needs, from software architecture diagrams to data flow diagrams, and everything in between. Its powerful syntax allows you to create detailed and precise diagrams without the hassle."
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Hugo and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - "**Completely Free and Open Source:** Enjoy complete access without any barriers."
+      - "**All-in-One Solution:** No need for multiple tools – YADL does it all."
+      - "**Customizable:** Tailor every aspect of your diagram to suit your specific requirements."
+      - "**Easy to Use:** Intuitive interface designed for both beginners and experts."
+      - "**Smart AI Assistant:** Describe your design, and YADL generates the diagram."
+      - "**Hundreds of Examples:** Access a vast library of pre-made diagrams to jumpstart your projects."
+      - "**Fast and Accurate:** Reduce manual effort and improve accuracy with AI-driven design suggestions."
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
-  - title: "Discover the Key Features Of Hugo"
+  - title: "Export with Ease"
     image: "/images/service-2.png"
-    content: "Hugo is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
+    content: "Once your diagram is ready, you can export it in multiple formats – all for free. YADL supports exporting diagrams as SVG, PNG, or PDF files, ensuring your designs are ready to use wherever you need them."
     bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+      - "**Multiple Export Formats:** Download your diagrams as SVG, PNG, or PDF."
+      - "**High-Quality Output:** Ensure your diagrams look great on any platform."
+      - "**Versatile Language:** Create all types of diagrams, from simple flowcharts to complex system models."
+      - "**Collaboration-Friendly:** Easily share your diagrams with others, thanks to the web-based platform."
+      - "**Community-Driven:** Join a growing community of developers and designers contributing to and improving YADL."
+      - "Support for **All Types** of Diagrams"
     button:
       enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/hugoplate"
+      label: "Explore Hundreds of Examples"
+      link: "/examples"
 
-  - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
+  - title: "Web-Based IDE with Live Preview"
     image: "/images/service-3.png"
-    content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
+    content: "YADL offers a powerful, web-based Integrated Development Environment (IDE) that lets you create and view your diagrams in real-time, all from within your browser."
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Hugo a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+      - "**Live Preview:** Instantly see how your diagram looks as you type."
+      - "**User-Friendly Interface:** Designed to be intuitive for everyone, from beginners to pros."
+      - "**Runs in Your Browser:** No installation or sign-up required.."
+      - "**Web-Based IDE** with **Real-Time** Collaboration"
+      - "**No Installations Needed:** Start creating instantly – no downloads required."
     button:
       enable: false
       label: ""

@@ -1,9 +1,9 @@
 ---
-title: "Hey, I am John Doe!"
+title: "The Vision Behind YADL"
 meta_title: "About"
-description: "this is meta description"
+description: "Know why we developed yet another diagramming language."
 image: "/images/avatar.png"
 draft: false
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+YADL (Yet Another Diagram Language) is more than just another markup language—it's a groundbreaking tool designed to revolutionize how developers, architects, and engineers create and interact with software design diagrams. With YADL, the power to design, preview, and export complex diagrams is available directly in your web browser, all without the need for sign-ups, installations, or fees. Completely free and open-source, YADL is accessible to everyone, empowering users to focus on what truly matters: designing clear, accurate, and effective diagrams.

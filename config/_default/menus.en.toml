@@ -17,7 +17,17 @@ url = "/elements"
 weight = 3
 
 [[main]]
+name = "Docs"
+pageRef = "/docs"
 weight = 4
+
+[[main]]
+name = "Showcase"
+pageRef = "/showcase"
+weight = 5
+
+[[main]]
+weight = 6
 name = "Pages"
 
 [[main]]
@@ -45,19 +55,3 @@ parent = "Pages"
 name = "404 Page"
 url = "/404"
 
-
-# footer menu
-[[footer]]
-name = "About"
-url = "/about"
-weight = 1
-
-[[footer]]
-name = "Elements"
-url = "/elements"
-weight = 2
-
-[[footer]]
-name = "Privacy Policy"
-url = "/privacy-policy"
-weight = 3
