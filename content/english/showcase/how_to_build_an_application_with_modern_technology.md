@@ -9,3 +9,23 @@ author: "Sagar Shelar"
 tags: ["nextjs", "tailwind"]
 draft: false
 ---
+
+{{< yadlEditor code=
+`<Avatar
+      id : "AVATAR"
+      accessoriesType : Sunglasses
+      clotheType : GraphicShirt
+      eyeType : Close
+      eyebrowType : Angry
+      facialHairType : BeardLight
+      fontFamily : "sdf"
+      graphicType : Bat
+      hairColor : Blonde
+      mouthType : Grimace
+      skinColor : DarkBrown
+      style : Circle
+      topType : LongHairCurly
+      dimension: { height : 100 width : 100 }
+      position: { x : 10 y : 0 }
+/>
+` >}}
