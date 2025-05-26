@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Start Creating Diagrams Now"
-    link: "/playground"
+    link: "playground"
 
 # Features
 features:
@@ -40,7 +40,7 @@ features:
     button:
       enable: true
       label: "Explore Hundreds of Examples"
-      link: "/examples"
+      link: "showcase"
 
   - title: "Web-Based IDE with Live Preview"
     image: "/images/service-3.png"

@@ -18,7 +18,7 @@ navbar_fixed = true
 theme_switcher = true
 theme_default = "system" # available options [light/dark/system]
 # Main Sections
-mainSections = ["blog"]
+mainSections = ["showcase"]
 # contact form action
 contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
 # google tag manager, see https://developers.google.com/tag-manager/
@@ -46,7 +46,7 @@ link = "playground"
 [search]
 enable = true
 primary_color = "#121212"
-include_sections = ["blog"]
+include_sections = ["showcase"]
 show_image = true
 show_description = true
 show_tags = true
@@ -81,8 +81,8 @@ mastodon = "" # Your verification code
 # cookies
 # cookies module: https://github.com/gethugothemes/hugo-modules/tree/master/components/cookie-consent
 [cookies]
-enable = false
-expire_days = 60
+enable = true
+expire_days = 90
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 button = "I Accept"
 
