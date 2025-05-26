@@ -17,6 +17,7 @@
     "theme-setup": "node ./scripts/themeSetup.js",
     "update-theme": "node ./scripts/themeUpdate.js",
     "format": "prettier -w .",
+    "copy:libs:prepare": "shx mkdir -p ./public/libs/monaco-editor-workers/workers && shx mkdir -p ./public/css",
     "copy:coi-serviceworker": "shx cp -f ./node_modules/coi-serviceworker/coi-serviceworker.js ./public/coi-serviceworker.js"
   },
   "devDependencies": {
@@ -36,6 +37,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-fontpicker-ts": "^1.2.0",
+    "shx": "^0.4.0",
     "yadl-editor": "file:../../i2p/yadl-ui/packages/yadl-editor-core/yadl-editor",
     "yadl-preview": "file:../../i2p/yadl-ui/packages/yadl-preview"
   }

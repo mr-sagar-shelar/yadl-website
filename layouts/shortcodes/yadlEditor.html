@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/yadl-website/css/allotment.css" />
+<link rel="stylesheet" crossorigin href="/yadl-website/assets/index-j9vqV5k9.css">
+<script type="module" crossorigin src="/yadl-website/assets/index-DjaZUqoN.js"></script>
 
 <div class="yadl-editor-container">
     <div id="editor"></div>
@@ -6,9 +8,9 @@
       <div id="editor-code" data-code="{{ .Get "code" }}"></div>
     {{ end }}
 
-    {{ with resources.Get "YadlEditor.tsx" }}
+    <!-- {{ with resources.Get "YadlEditor.tsx" }}
       {{ $options := dict "defines" (dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` $.Site.BaseURL)) }}
       {{ $script := . | js.Build $options }}
       <script src="{{ $script.RelPermalink }}" defer></script>
-    {{ end }}
+    {{ end }} -->
 </div>
