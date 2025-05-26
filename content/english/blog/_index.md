@@ -1,5 +1,5 @@
 ---
-title: "Blog Posts"
-meta_title: ""
-description: "this is meta description"
+title: "YADL Showcase"
+meta_title: "Showcase"
+description: "This showcase list all the diagrams created using YADL."
 ---
