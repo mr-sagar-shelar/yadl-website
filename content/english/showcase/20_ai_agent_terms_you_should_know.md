@@ -7,6 +7,7 @@ image: "/images/Diagram2.gif"
 categories: ["Technology", "Data"]
 author: "Sagar Shelar"
 tags: ["technology", "tailwind"]
+hideHeader: true
 draft: false
 ---
 

@@ -7,6 +7,7 @@ image: "/images/Diagram3.gif"
 categories: ["Software"]
 author: "Sagar Shelar"
 tags: ["software", "tailwind"]
+hideHeader: true
 draft: false
 ---
 

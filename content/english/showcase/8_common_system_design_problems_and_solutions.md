@@ -6,6 +6,7 @@ date: 2025-04-26T05:00:00Z
 image: "/images/DiagramTemplate.jpg"
 categories: ["Architecture"]
 author: "Sagar Shelar"
+hideHeader: true
 tags: ["silicon", "technology"]
 draft: false
 ---

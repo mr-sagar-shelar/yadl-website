@@ -7,6 +7,7 @@ image: "/images/Diagram1.gif"
 categories: ["Application", "Data"]
 author: "Sagar Shelar"
 tags: ["nextjs", "tailwind"]
+hideHeader: true
 draft: false
 ---
 
