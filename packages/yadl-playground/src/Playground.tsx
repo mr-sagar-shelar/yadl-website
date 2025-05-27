@@ -5,7 +5,7 @@ import { Preview, SearchComponents, DnDProvider } from "yadl-preview";
 import { YadlEditor, YadlEditorRef, YadlEditorResponse } from "yadl-editor";
 import { Allotment } from "allotment";
 import "./allotment.css";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Edge, Node } from "@xyflow/react";
 import { debounce } from "lodash";
 import { availableThemes } from "./Constants";
@@ -20,8 +20,9 @@ function Playground(props: PlaygroundProps) {
     const [currentEdges, setCurrentEdges] = useState<Edge[]>([]);
     const editorReference = useRef<YadlEditorRef | null>(null);
     const [codeVisible, setCodeVisible] = useState(true);
+    const [editorLoaded, setEditorLoaded] = useState(false);
     const [previewVisible, setPreviewVisible] = useState(true);
-    const [componentsVisible, setComponentsVisible] = useState(true);
+    const [componentsVisible, setComponentsVisible] = useState(false);
     const [hasReadFromLocalStorage, setHasReadFromLocalStorage] = useState(false);
     const [sizes, setSizes] = useState<number[]>();
     const [currentTheme, setCurrentTheme] = useState<string>("light");
@@ -132,20 +133,23 @@ function Playground(props: PlaygroundProps) {
                             >
                                 <Allotment.Pane visible={codeVisible}>
                                     <div style={{ height: "100vh", width: "100%" }}>
-                                        <YadlEditor
-                                            ref={editorReference}
-                                            onChange={(code: YadlEditorResponse) => {
-                                                setCurrentNodes(code.nodes as Node[]);
-                                                setCurrentEdges(code.edges as Edge[]);
-                                                setCurrentFonts(code.fontsUsed);
-                                            }}
-                                            code={currentCode}
-                                        />
+                                        <Suspense>
+                                            <YadlEditor
+                                                ref={editorReference}
+                                                onChange={(code: YadlEditorResponse) => {
+                                                    setCurrentNodes(code.nodes as Node[]);
+                                                    setCurrentEdges(code.edges as Edge[]);
+                                                    setCurrentFonts(code.fontsUsed);
+                                                }}
+                                                code={currentCode}
+                                                onLoad={() => { setEditorLoaded(true) }}
+                                            />
+                                        </Suspense>
                                     </div>
                                 </Allotment.Pane>
                                 <Allotment.Pane visible={previewVisible}>
                                     <div style={{ height: "100vh", width: "100%" }}>
-                                        <Preview
+                                        {editorLoaded && <Preview
                                             initialNodes={currentNodes}
                                             initialEdges={currentEdges}
                                             onNodeSelect={(node) => {
@@ -166,11 +170,11 @@ function Playground(props: PlaygroundProps) {
                                             onNodeAdded={(node: any) => {
                                                 editorReference.current?.onNodeAdded(node);
                                             }}
-                                        />
+                                        />}
                                     </div>
                                 </Allotment.Pane>
                                 <Allotment.Pane visible={componentsVisible}>
-                                    <SearchComponents />
+                                    {editorLoaded && <SearchComponents />}
                                 </Allotment.Pane>
                             </Allotment>
                         }
