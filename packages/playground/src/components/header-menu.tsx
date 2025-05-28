@@ -59,7 +59,7 @@ export function HeaderMenu() {
     }
 
     return (
-        <Menubar>
+        <Menubar className="border-0 shadow-none">
             <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>
                 <MenubarContent>
