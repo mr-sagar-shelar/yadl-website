@@ -21,7 +21,7 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={50} minSize={40}>
-                    <div className="flex h-full">
+                    <div data-theme="aqua" className="flex h-full">
                         <Preview
                             initialNodes={[]}
                             initialEdges={[]}
@@ -48,8 +48,8 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={25} minSize={10}>
-                    <div className="flex h-full items-center justify-center p-6">
-                        <span className="font-semibold">Shapes</span>
+                    <div data-theme="light" className="flex h-full items-center justify-center p-6">
+                        <SearchComponents />
                     </div>
                 </ResizablePanel>
             </ResizablePanelGroup>
