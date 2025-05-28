@@ -6,6 +6,7 @@ import {
 import { Preview, SearchComponents, DnDProvider } from "yadl-preview";
 
 export default function PlaygroundContent() {
+    const previewTheme = "aqua";
     return (
         <div
             className="h-screen w-screen"
@@ -21,7 +22,7 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={50} minSize={40}>
-                    <div data-theme="aqua" className="flex h-full">
+                    <div data-theme={previewTheme} className="flex h-full">
                         <Preview
                             initialNodes={[]}
                             initialEdges={[]}
@@ -48,7 +49,7 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={25} minSize={10}>
-                    <div data-theme="light" className="flex h-full items-center justify-center p-6">
+                    <div data-theme={previewTheme} className="flex h-full items-center justify-center p-6">
                         <SearchComponents />
                     </div>
                 </ResizablePanel>
