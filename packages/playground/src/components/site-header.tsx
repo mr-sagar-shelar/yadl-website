@@ -1,8 +1,7 @@
-import { SidebarIcon, Share2, } from "lucide-react"
+import { SidebarIcon, Share2, Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { HeaderMenu } from "./header-menu"
-
 
 export function SiteHeader() {
   return (
@@ -17,9 +16,12 @@ export function SiteHeader() {
         </Button>
         <Separator orientation="vertical" className="mr-2 h-4" />
         <HeaderMenu />
-        <div className="ml-auto px-3">
+        <div className="ml-auto px-3 flex gap-4">
           <Button variant="secondary">
-            <Share2 /> Share
+            <Share2 />
+          </Button>
+          <Button >
+            <Plus />
           </Button>
         </div>
       </div>
