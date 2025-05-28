@@ -3,6 +3,7 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable"
+import { Preview, SearchComponents, DnDProvider } from "yadl-preview";
 
 export default function PlaygroundContent() {
     return (
@@ -20,8 +21,29 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={50} minSize={40}>
-                    <div className="flex h-full items-center justify-center p-6">
-                        <span className="font-semibold">Preview</span>
+                    <div className="flex h-full">
+                        <Preview
+                            initialNodes={[]}
+                            initialEdges={[]}
+                        // onNodeSelect={(node) => {
+                        //     editorReference.current?.onNodeSelect(node);
+                        // }}
+                        // onEdgeConnect={(edge: any) => {
+                        //     editorReference.current?.onEdgeConnect(edge);
+                        // }}
+                        // onNodePositionChanged={(node: any) => {
+                        //     editorReference.current?.onNodePositionChanged(node);
+                        // }}
+                        // onNodeRemoved={(node: any) => {
+                        //     editorReference.current?.onNodeRemoved(node);
+                        // }}
+                        // onNodeResized={(node: any) => {
+                        //     editorReference.current?.onNodeResized(node);
+                        // }}
+                        // onNodeAdded={(node: any) => {
+                        //     editorReference.current?.onNodeAdded(node);
+                        // }}
+                        />
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle />
