@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button"
-function App() {
+import { SiteHeader } from "@/components/site-header"
+
+export default function Page() {
   return (
-    <>
-      <div className="flex flex-col items-center justify-center min-h-svh">
-        <Button>Click me</Button>
-      </div>
-    </>
+    <div className="[--header-height:calc(theme(spacing.14))]">
+      <SiteHeader />
+    </div>
   )
 }
-
-export default App
