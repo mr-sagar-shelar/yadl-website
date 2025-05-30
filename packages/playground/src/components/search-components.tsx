@@ -1,5 +1,4 @@
-import { Minus, Plus, Trash2 } from "lucide-react"
-
+import { Minus, Plus, X } from "lucide-react"
 import { SearchForm } from "@/components/search-form"
 import {
   Collapsible,
@@ -14,6 +13,9 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import SearchSkillIcons from "./search-skill-icons";
+
 
 const data = {
   navMain: [
@@ -178,11 +180,72 @@ const data = {
 export function SearchComponents() {
   return (
     <>
-      <SidebarContent>
+      <SidebarContent className="gap-0">
         <SearchForm />
+        {/* <ScrollArea className="h-90%"> */}
         <SidebarGroup>
           <SidebarMenu>
-            {data.navMain.map((item, index) => (
+            <Collapsible
+              key={"aws-icons"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    AWS Icons
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
+                    <SearchSkillIcons />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+            <Collapsible
+              key={"azure-icons"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    Azure Icons
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
+                    <SearchSkillIcons />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+            <Collapsible
+              key={"gcp-icons"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    Gcp Icons
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
+                    <SearchSkillIcons />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+            {/* {data.navMain.map((item, index) => (
               <Collapsible
                 key={item.title}
                 defaultOpen={index === 1}
@@ -198,29 +261,16 @@ export function SearchComponents() {
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    Content for {item.title}
+                    <ScrollArea className="h-72 w-48 p-2">
+                      <h3> Icons Here</h3>
+                    </ScrollArea>
                   </CollapsibleContent>
-                  {/* {item.items?.length ? (
-                  <CollapsibleContent>
-                    <SidebarMenuSub>
-                      {item.items.map((item) => (
-                        <SidebarMenuSubItem key={item.title}>
-                          <SidebarMenuSubButton
-                            asChild
-                            isActive={item.isActive}
-                          >
-                            <a href={item.url}>{item.title}</a>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
-                    </SidebarMenuSub>
-                  </CollapsibleContent>
-                ) : null} */}
                 </SidebarMenuItem>
               </Collapsible>
-            ))}
+            ))} */}
           </SidebarMenu>
         </SidebarGroup>
+        {/* </ScrollArea> */}
       </SidebarContent>
       <div className="p-1 absolute bottom-0">
         <Button variant="secondary" >

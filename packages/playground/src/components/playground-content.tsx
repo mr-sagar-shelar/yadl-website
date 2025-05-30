@@ -19,7 +19,7 @@ export default function PlaygroundContent() {
                 className="w-full h-screen"
             >
                 <ResizablePanel defaultSize={25} minSize={10}>
-                    <div className="flex h-full items-center justify-center p-6">
+                    <div className="flex h-full items-center justify-center p-2">
                         <span className="font-semibold">Code</span>
                     </div>
                 </ResizablePanel>
@@ -52,7 +52,7 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={25} minSize={10}>
-                    <div className="flex h-full justify-center p-6">
+                    <div className="flex h-full justify-center">
                         <SearchComponents />
                     </div>
                 </ResizablePanel>
