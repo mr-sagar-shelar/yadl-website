@@ -3,8 +3,13 @@ import { memo } from "react";
 import { Avatar, AvatarNames } from "yadl-avatar";
 import type { DragDropProps } from "yadl-preview";
 import { useDnD } from "yadl-preview";
-import { AvatarTopStyle, AccessoriesType, HairColor, FacialHairType, ClotheType, EyeType, EyebrowType, MouthType, SkinColor } from "./constants";
+import { AvatarTopStyle, AccessoriesType, HairColor, FacialHairType, ClotheType, EyeType, EyebrowType, MouthType, SkinColor, CONSTANTS } from "./constants";
 import type { AvatarProps } from "yadl-avatar/dist/components/AvatarComponent";
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
 const SearchAvatars = () => {
     const [top, setTop] = useState<string>("");
@@ -82,8 +87,8 @@ const SearchAvatars = () => {
     const AvatarComponent = useMemo(() => {
         const customProps: AvatarProps = {
             avatarStyle: "Circle",
-            width: 200,
-            height: 200
+            width: 50,
+            height: 50
         };
         if (top != "") {
             customProps["topType"] = top;
@@ -122,26 +127,39 @@ const SearchAvatars = () => {
                 return (
                     <div
                         key={key}
-                        className="m-2 cursor-grab px-5 size-[200px]"
+                        className={`m-2 cursor-grab px-5 size-[${CONSTANTS.iconPreviewSize}px]`}
                         onDragStart={(event) =>
                             onDragStart(event, {
                                 type: "avatar",
                                 data: {
                                     ...textDetails as AvatarProps,
                                     ...customProps,
-                                    width: 200,
-                                    height: 200
+                                    width: CONSTANTS.iconDropSize,
+                                    height: CONSTANTS.iconDropSize
                                 },
                             })
                         }
                         draggable
                     >
-                        <Avatar
-                            {...textDetails as AvatarProps}
-                            {...customProps}
-                            width={200}
-                            height={200}
-                        />
+                        <HoverCard>
+                            <HoverCardTrigger>
+                                <Avatar
+                                    {...textDetails as AvatarProps}
+                                    {...customProps}
+                                    width={CONSTANTS.iconPreviewSize}
+                                    height={CONSTANTS.iconPreviewSize}
+                                />
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-[200px] h-[200px]">
+                                <Avatar
+                                    {...textDetails as AvatarProps}
+                                    {...customProps}
+                                    width={CONSTANTS.iconHoverSize}
+                                    height={CONSTANTS.iconHoverSize}
+                                />
+                            </HoverCardContent>
+                        </HoverCard>
+
                     </div>
                 );
             });
@@ -242,7 +260,7 @@ const SearchAvatars = () => {
 
                 </div>
                 <div
-                    className={`grid grid-cols-1 overflow-auto w-full h-full`}
+                    className={`flex flex-wrap overflow-auto w-full h-full`}
                 >
                     {AvatarComponent}
                 </div>

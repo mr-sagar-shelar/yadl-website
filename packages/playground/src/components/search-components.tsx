@@ -13,7 +13,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import SearchAwsIcons from "./search-aws-icons";
 import SearchSkillIcons from "./search-skill-icons";
 import SearchAzureIcons from "./search-azure-icons";
@@ -201,13 +200,11 @@ export function SearchComponents() {
                     AWS Icons
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                    {/* <X className="m-1 hover:bg-primary hover:text-secondary" /> */}
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchAwsIcons />
-                  </ScrollArea>
+                  <SearchAwsIcons />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
@@ -221,13 +218,10 @@ export function SearchComponents() {
                     Azure Icons
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchAzureIcons />
-                  </ScrollArea>
+                  <SearchAzureIcons />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
@@ -241,13 +235,10 @@ export function SearchComponents() {
                     Gcp Icons
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchGcpIcons />
-                  </ScrollArea>
+                  <SearchGcpIcons />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
@@ -261,13 +252,10 @@ export function SearchComponents() {
                     Skill Icons
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchSkillIcons />
-                  </ScrollArea>
+                  <SearchSkillIcons />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
@@ -281,13 +269,10 @@ export function SearchComponents() {
                     Text
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchTextComponents />
-                  </ScrollArea>
+                  <SearchTextComponents />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
@@ -301,13 +286,10 @@ export function SearchComponents() {
                     Box
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchBoxComponents />
-                  </ScrollArea>
+                  <SearchBoxComponents />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
@@ -321,13 +303,10 @@ export function SearchComponents() {
                     Avatar
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <X className="m-1 hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <ScrollArea className="h-70">
-                    <SearchAvatars />
-                  </ScrollArea>
+                  <SearchAvatars />
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
