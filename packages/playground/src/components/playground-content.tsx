@@ -3,7 +3,9 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable"
-import { Preview, SearchComponents, DnDProvider } from "yadl-preview";
+// import { Preview, SearchComponents } from "yadl-preview";
+import { Preview } from "yadl-preview";
+import { AppSidebar } from "@/components/app-sidebar";
 
 export default function PlaygroundContent() {
     const previewTheme = "aqua";
@@ -50,7 +52,7 @@ export default function PlaygroundContent() {
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={25} minSize={10}>
                     <div data-theme={previewTheme} className="flex h-full items-center justify-center p-6">
-                        <SearchComponents />
+                        <AppSidebar side="right" />
                     </div>
                 </ResizablePanel>
             </ResizablePanelGroup>
