@@ -35,9 +35,14 @@
     "react-resizable-panels": "^3.0.2",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.7",
+    "yadl-avatar": "file:../../../../i2p/yadl-ui/packages/yadl-avatar",
+    "yadl-aws-icons": "^1.0.6",
+    "yadl-azure-icons": "^1.0.6",
     "yadl-editor": "file:../../../../i2p/yadl-ui/packages/yadl-editor-core/yadl-editor",
+    "yadl-gcp-icons": "^1.0.6",
     "yadl-preview": "file:../../../../i2p/yadl-ui/packages/yadl-preview",
-    "yadl-skill-icons": "^1.0.6"
+    "yadl-skill-icons": "^1.0.6",
+    "yadl-ui-components": "file:../../../../i2p/yadl-ui/packages/yadl-ui-components"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

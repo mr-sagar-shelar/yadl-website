@@ -14,7 +14,13 @@ import {
 } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import SearchAwsIcons from "./search-aws-icons";
 import SearchSkillIcons from "./search-skill-icons";
+import SearchAzureIcons from "./search-azure-icons";
+import SearchGcpIcons from "./search-gcp-icons";
+import SearchTextComponents from "./search-text-components";
+import SearchBoxComponents from "./search-box-components";
+import SearchAvatars from "./search-avatars";
 
 
 const data = {
@@ -200,7 +206,7 @@ export function SearchComponents() {
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <ScrollArea className="h-70">
-                    <SearchSkillIcons />
+                    <SearchAwsIcons />
                   </ScrollArea>
                 </CollapsibleContent>
               </SidebarMenuItem>
@@ -220,7 +226,7 @@ export function SearchComponents() {
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <ScrollArea className="h-70">
-                    <SearchSkillIcons />
+                    <SearchAzureIcons />
                   </ScrollArea>
                 </CollapsibleContent>
               </SidebarMenuItem>
@@ -240,11 +246,92 @@ export function SearchComponents() {
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <ScrollArea className="h-70">
+                    <SearchGcpIcons />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+            <Collapsible
+              key={"skill-icons"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    Skill Icons
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
                     <SearchSkillIcons />
                   </ScrollArea>
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
+            <Collapsible
+              key={"text-components"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    Text
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
+                    <SearchTextComponents />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+            <Collapsible
+              key={"text-components"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    Box
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
+                    <SearchBoxComponents />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+            <Collapsible
+              key={"text-components"}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton>
+                    Avatar
+                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <X className="m-1 hover:bg-primary hover:text-secondary" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <ScrollArea className="h-70">
+                    <SearchAvatars />
+                  </ScrollArea>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+
             {/* {data.navMain.map((item, index) => (
               <Collapsible
                 key={item.title}
