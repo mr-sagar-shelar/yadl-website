@@ -1,4 +1,4 @@
-import { Minus, Plus, X } from "lucide-react"
+import { Minus, Plus, Pencil } from "lucide-react"
 import { SearchForm } from "@/components/search-form"
 import {
   Collapsible,
@@ -12,7 +12,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Button } from "@/components/ui/button"
 import SearchAwsIcons from "./search-aws-icons";
 import SearchSkillIcons from "./search-skill-icons";
 import SearchAzureIcons from "./search-azure-icons";
@@ -232,7 +231,7 @@ export function SearchComponents() {
               <SidebarMenuItem>
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
-                    Gcp Icons
+                    GCP Icons
                     <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
@@ -267,8 +266,9 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Text
-                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Pencil className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -284,8 +284,9 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Box
-                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Pencil className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -301,8 +302,9 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Avatar
-                    <Plus className="m-1 ml-auto group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
-                    <Minus className="m-1 ml-auto group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Pencil className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
+                    <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -338,11 +340,11 @@ export function SearchComponents() {
         </SidebarGroup>
         {/* </ScrollArea> */}
       </SidebarContent>
-      <div className="p-1 absolute bottom-0">
+      {/* <div className="p-1 absolute bottom-0">
         <Button variant="secondary" >
           <Plus /> More Shapes
         </Button>
-      </div>
+      </div> */}
     </>
   )
 }

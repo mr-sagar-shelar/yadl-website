@@ -136,7 +136,6 @@ const SearchTextComponents = () => {
                     }
                 </div>
                 <div
-                    data-theme="light"
                     style={{ fontFamily: currentFont }}
                     className={`grid grid-cols-1 overflow-auto w-full h-full ${currentFontSize}`}
                 >

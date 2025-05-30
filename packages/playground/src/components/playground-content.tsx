@@ -7,9 +7,10 @@ import {
 import { Preview } from "yadl-preview";
 // import { AppSidebar } from "@/components/app-sidebar";
 import { SearchComponents } from "@/components/search-components";
+import { useTheme } from "./theme-provider";
 
 export default function PlaygroundContent() {
-    const previewTheme = "light";
+    const { theme } = useTheme();
     return (
         <div
             className="w-screen h-screen"
@@ -25,7 +26,7 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={50} minSize={40}>
-                    <div data-theme={previewTheme} className="flex h-full">
+                    <div data-theme={theme} className="flex h-full">
                         <Preview
                             initialNodes={[]}
                             initialEdges={[]}

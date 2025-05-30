@@ -2,6 +2,7 @@ import { Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { HeaderMenu } from "./header-menu"
 import { PresetShare } from "./preset-share"
+import { ThemeToggle } from "./mode-toggle"
 
 export function SiteHeader() {
   return (
@@ -13,6 +14,7 @@ export function SiteHeader() {
           <Button >
             <Plus />
           </Button>
+          <ThemeToggle />
         </div>
       </div>
     </header>

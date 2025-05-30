@@ -11,7 +11,7 @@ import { DnDProvider } from "yadl-preview";
 
 export default function Page() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme={"system"} storageKey="theme">
       <SidebarProvider>
         <DnDProvider>
           <div className="[--header-height:calc(theme(spacing.14))]">
