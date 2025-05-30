@@ -19,6 +19,8 @@ import SearchGcpIcons from "./search-gcp-icons";
 import SearchTextComponents from "./search-text-components";
 import SearchBoxComponents from "./search-box-components";
 import SearchAvatars from "./search-avatars";
+import { ConfigureText } from "./configure-text-dialog";
+import { useState } from "react";
 
 
 const data = {
@@ -182,6 +184,8 @@ const data = {
 }
 
 export function SearchComponents() {
+  let [configureTextDialogOpen, setConfigureTexDialogOpen] = useState<boolean>(false);
+
   return (
     <>
       <SidebarContent className="gap-0">
@@ -266,7 +270,7 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Text
-                    <Pencil className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Pencil onClick={(event) => { setConfigureTexDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
                     <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
@@ -345,6 +349,7 @@ export function SearchComponents() {
           <Plus /> More Shapes
         </Button>
       </div> */}
+      <ConfigureText onStatusChange={(isOpen) => { setConfigureTexDialogOpen(isOpen) }} isOpen={configureTextDialogOpen} />
     </>
   )
 }
