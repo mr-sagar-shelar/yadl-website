@@ -5,17 +5,18 @@ import {
 } from "@/components/ui/resizable"
 // import { Preview, SearchComponents } from "yadl-preview";
 import { Preview } from "yadl-preview";
-import { AppSidebar } from "@/components/app-sidebar";
+// import { AppSidebar } from "@/components/app-sidebar";
+import { SearchComponents } from "@/components/search-components";
 
 export default function PlaygroundContent() {
-    const previewTheme = "aqua";
+    const previewTheme = "light";
     return (
         <div
-            className="h-screen w-screen"
+            className="w-screen h-screen"
         >
             <ResizablePanelGroup
                 direction="horizontal"
-                className="w-full h-full"
+                className="w-full h-screen"
             >
                 <ResizablePanel defaultSize={25} minSize={10}>
                     <div className="flex h-full items-center justify-center p-6">
@@ -51,8 +52,8 @@ export default function PlaygroundContent() {
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={25} minSize={10}>
-                    <div data-theme={previewTheme} className="flex h-full items-center justify-center p-6">
-                        <AppSidebar side="right" />
+                    <div className="flex h-full justify-center p-6">
+                        <SearchComponents />
                     </div>
                 </ResizablePanel>
             </ResizablePanelGroup>
