@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
-    DialogClose,
     DialogContent,
     DialogDescription,
     DialogFooter,
@@ -11,6 +10,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { TextFontSize } from "@/components/search/select/select-text-font-size";
+import { useAtom } from 'jotai'
+import { userText, userClasses, fontFamily } from '@/atoms/text-tag-atoms'
+import FontPicker from "react-fontpicker-ts";
 
 interface ConfigureTextProps {
     isOpen: boolean;
@@ -18,42 +20,62 @@ interface ConfigureTextProps {
 }
 
 export function ConfigureText(props: ConfigureTextProps) {
+    const [currentUserText, setCurrentUserText] = useAtom(userText);
+    const [currentClasses, setCurrentClasses] = useAtom(userClasses);
+    const [currentFontFamily, setCurrentFontFamily] = useAtom(fontFamily);
 
     return (
-        <Dialog open={props.isOpen}>
-            <form>
-                {/* <DialogTrigger asChild>
-                    <Button variant="outline">Open Dialog</Button>
-                </DialogTrigger> */}
-                <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                        <DialogTitle>Text configuration</DialogTitle>
-                        <DialogDescription>
-                            Make changes to your profile here. Click save when you&apos;re
-                            done.
-                        </DialogDescription>
-                    </DialogHeader>
-                    <div className="flex flex-wrap">
+        <Dialog
+            open={props.isOpen}
+            onOpenChange={(isOpen) => {
+                props.onStatusChange(isOpen)
+            }}
+        >
+            <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                    <DialogTitle>Add Text Variant</DialogTitle>
+                    <DialogDescription>
+                        New variants added by you will be stored in your local cache and will be cleared if the cache is cleared.
+                    </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4">
+                    <div className="grid gap-3">
+                        <Label htmlFor="user-text">Text</Label>
+                        <Input
+                            id="user-text"
+                            value={currentUserText}
+                            onChange={(event) => {
+                                setCurrentUserText(event.target.value);
+                            }}
+                        />
+                    </div>
+                    <div className="grid gap-3">
+                        <Label htmlFor="user-text-font-family">Font Family</Label>
+                        <FontPicker
+                            id="user-text-font-family"
+                            defaultValue={currentFontFamily}
+                            autoLoad
+                            value={(fontFamily: string) => setCurrentFontFamily(fontFamily)}
+                        />
+                    </div>
+                    <div className="grid gap-3">
+                        <Label htmlFor="user-custom-classes">Classes</Label>
+                        <Input
+                            id="user-custom-classes"
+                            value={currentClasses}
+                            onChange={(event) => {
+                                setCurrentClasses(event.target.value);
+                            }}
+                        />
+                    </div>
+                    <div className="flex flex-wrap gap-5 pb-5">
                         <TextFontSize />
                     </div>
-                    <div className="grid gap-4">
-                        <div className="grid gap-3">
-                            <Label htmlFor="name-1">Name</Label>
-                            <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
-                        </div>
-                        <div className="grid gap-3">
-                            <Label htmlFor="username-1">Username</Label>
-                            <Input id="username-1" name="username" defaultValue="@peduarte" />
-                        </div>
-                    </div>
-                    <DialogFooter>
-                        <DialogClose asChild>
-                            <Button variant="outline" onClick={() => { props.onStatusChange(false) }}>Cancel</Button>
-                        </DialogClose>
-                        <Button type="submit" onClick={() => { props.onStatusChange(false) }}>Save changes</Button>
-                    </DialogFooter>
-                </DialogContent>
-            </form>
+                </div>
+                <DialogFooter>
+                    <Button type="submit" onClick={() => { props.onStatusChange(false) }}>Close</Button>
+                </DialogFooter>
+            </DialogContent>
         </Dialog>
     )
 }
