@@ -42,30 +42,8 @@ export function HeaderMenu() {
             <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>
                 <MenubarContent>
-                    <MenubarItem>
-                        New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-                    </MenubarItem>
-                    <MenubarItem>
-                        New Window <MenubarShortcut>⌘N</MenubarShortcut>
-                    </MenubarItem>
-                    <MenubarItem disabled>New Incognito Window</MenubarItem>
                     <MenubarItem>Copy code</MenubarItem>
-                    <MenubarSeparator />
-                    <MenubarSub>
-                        <MenubarSubTrigger>Share</MenubarSubTrigger>
-                        <MenubarSubContent>
-                            <MenubarItem>Email link</MenubarItem>
-                            <MenubarItem>Messages</MenubarItem>
-                            <MenubarItem>Notes</MenubarItem>
-                        </MenubarSubContent>
-                    </MenubarSub>
-                    <MenubarSeparator />
-                    <MenubarItem>
-                        Print... <MenubarShortcut>⌘P</MenubarShortcut>
-                    </MenubarItem>
-                    <MenubarItem>
-                        Configurations... <MenubarShortcut>⌘C</MenubarShortcut>
-                    </MenubarItem>
+                    <MenubarItem>Format code</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
@@ -100,16 +78,7 @@ export function HeaderMenu() {
                         Shapes
                     </MenubarCheckboxItem>
                     <MenubarSeparator />
-                    <MenubarItem inset>
-                        Reload <MenubarShortcut>⌘R</MenubarShortcut>
-                    </MenubarItem>
-                    <MenubarItem disabled inset>
-                        Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
-                    </MenubarItem>
-                    <MenubarSeparator />
                     <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-                    <MenubarSeparator />
-                    <MenubarItem inset>Hide Sidebar</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
@@ -123,7 +92,7 @@ export function HeaderMenu() {
                         </MenubarRadioGroup>
                     </ScrollArea>
                     <MenubarSeparator />
-                    <MenubarItem inset>Make your theme.</MenubarItem>
+                    <MenubarItem disabled inset>Make your theme.</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
         </Menubar>
