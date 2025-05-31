@@ -1,17 +1,17 @@
 import { useMemo } from "react";
-import * as AWSIcons from "yadl-aws-icons";
-import { AwsIconNames } from "yadl-aws-icons";
+import * as SkillIcons from "yadl-skill-icons";
+import { SkillIconNames } from "yadl-skill-icons";
 import { memo } from "react";
 import type { DragDropProps } from "yadl-preview";
 import { useDnD } from "yadl-preview";
-import { CONSTANTS } from './constants';
+import { CONSTANTS } from '@/components/constants';
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
 
-const SearchAwsIcons = () => {
+const SearchSkillIcons = () => {
     const [_, setType] = useDnD();
     const onDragStart = (event: any, nodePayload: DragDropProps) => {
         if (setType) {
@@ -21,11 +21,11 @@ const SearchAwsIcons = () => {
     };
 
     const IconsComponent = useMemo(() => {
-        const listItems = Object.entries(AwsIconNames)
+        const listItems = Object.entries(SkillIconNames)
             .map((icons) => {
                 const [key, iconDetails] = icons;
                 // @ts-ignore
-                let Icon = AWSIcons[iconDetails.icon];
+                let Icon = SkillIcons[iconDetails.icon];
                 if (Icon) {
                     return (
                         <div
@@ -36,7 +36,7 @@ const SearchAwsIcons = () => {
                                     type: "icon",
                                     data: {
                                         icon: `${key}`,
-                                        category: "aws",
+                                        category: "skill",
                                         width: CONSTANTS.iconDropSize,
                                         height: CONSTANTS.iconDropSize
                                     },
@@ -73,5 +73,5 @@ const SearchAwsIcons = () => {
     );
 };
 
-const Memo = memo(SearchAwsIcons);
+const Memo = memo(SearchSkillIcons);
 export default Memo;

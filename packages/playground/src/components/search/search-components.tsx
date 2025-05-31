@@ -1,5 +1,5 @@
-import { Minus, Plus, Pencil } from "lucide-react"
-import { SearchForm } from "@/components/search-form"
+import { Minus, Plus, Pencil, Cog } from "lucide-react"
+import { SearchForm } from "@/components/search/search-form"
 import {
   Collapsible,
   CollapsibleContent,
@@ -19,7 +19,7 @@ import SearchGcpIcons from "./search-gcp-icons";
 import SearchTextComponents from "./search-text-components";
 import SearchBoxComponents from "./search-box-components";
 import SearchAvatars from "./search-avatars";
-import { ConfigureText } from "./configure-text-dialog";
+import { ConfigureText } from "../configure-text-dialog";
 import { useState } from "react";
 
 
@@ -270,7 +270,7 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Text
-                    <Pencil onClick={(event) => { setConfigureTexDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Cog onClick={(event) => { setConfigureTexDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
                     <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>

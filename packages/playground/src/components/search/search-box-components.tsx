@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import * as Boxes from "yadl-ui-components";
 import { memo } from "react";
-import { BoxNames } from "./constants/BoxNames";
-import { BorderStyles, BorderRadius, BorderSizes, Opacity, GradientDirection } from "./constants";
+import { BoxNames } from "@/components/constants/BoxNames";
+import { BorderStyles, BorderRadius, BorderSizes, Opacity, GradientDirection } from "@/components/constants";
 import type { DragDropProps } from "yadl-preview";
 import { useDnD } from "yadl-preview";
 

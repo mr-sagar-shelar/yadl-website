@@ -6,7 +6,7 @@ import {
 // import { Preview, SearchComponents } from "yadl-preview";
 import { Preview } from "yadl-preview";
 // import { AppSidebar } from "@/components/app-sidebar";
-import { SearchComponents } from "@/components/search-components";
+import { SearchComponents } from "@/components/search/search-components";
 import { useTheme } from "./theme-provider";
 
 export default function PlaygroundContent() {

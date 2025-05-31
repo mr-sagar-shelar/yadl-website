@@ -1,17 +1,17 @@
 import { useMemo } from "react";
-import * as GcpIcons from "yadl-gcp-icons";
-import { GCPIconNames } from "yadl-gcp-icons";
+import * as AzureIcons from "yadl-azure-icons";
+import { AzureIconNames } from "yadl-azure-icons";
 import { memo } from "react";
 import type { DragDropProps } from "yadl-preview";
 import { useDnD } from "yadl-preview";
-import { CONSTANTS } from './constants';
+import { CONSTANTS } from '@/components/constants';
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
 
-const SearchSkillIcons = () => {
+const SearchAzureIcons = () => {
     const [_, setType] = useDnD();
     const onDragStart = (event: any, nodePayload: DragDropProps) => {
         if (setType) {
@@ -21,11 +21,11 @@ const SearchSkillIcons = () => {
     };
 
     const IconsComponent = useMemo(() => {
-        const listItems = Object.entries(GCPIconNames)
+        const listItems = Object.entries(AzureIconNames)
             .map((icons) => {
                 const [key, iconDetails] = icons;
                 // @ts-ignore
-                let Icon = GcpIcons[iconDetails.icon];
+                let Icon = AzureIcons[iconDetails.icon];
                 if (Icon) {
                     return (
                         <div
@@ -36,7 +36,7 @@ const SearchSkillIcons = () => {
                                     type: "icon",
                                     data: {
                                         icon: `${key}`,
-                                        category: "gcp",
+                                        category: "azure",
                                         width: CONSTANTS.iconDropSize,
                                         height: CONSTANTS.iconDropSize
                                     },
@@ -73,5 +73,5 @@ const SearchSkillIcons = () => {
     );
 };
 
-const Memo = memo(SearchSkillIcons);
+const Memo = memo(SearchAzureIcons);
 export default Memo;

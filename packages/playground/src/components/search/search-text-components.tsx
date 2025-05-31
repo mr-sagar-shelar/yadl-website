@@ -6,7 +6,7 @@ import type { DragDropProps } from "yadl-preview";
 import { useDnD } from "yadl-preview";
 import FontPicker from "react-fontpicker-ts";
 import "react-fontpicker-ts/dist/index.css";
-import { GradientDirection, FontSizes } from "./constants";
+import { GradientDirection, FontSizes } from "@/components/constants";
 
 const SearchTextComponents = () => {
     const [currentFont, setCurrentFont] = useState<string>("Audiowide");
