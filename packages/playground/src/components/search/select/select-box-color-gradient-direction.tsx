@@ -7,10 +7,10 @@ import {
 } from "@/components/ui/select"
 import { useAtom } from 'jotai'
 import { GradientDirection } from "@/components/constants";
-import { gradientDirection } from '@/atoms/text-tag-atoms'
+import { gradientDirection } from '@/atoms/box-tag-atoms'
 import { Label } from "@/components/ui/label";
 
-export function TextColorGradient() {
+export function BoxColorGradient() {
     const [currentGradientDirection, setCurrentGradientDirection] = useAtom(gradientDirection);
     const renderOptions = () => {
         return GradientDirection.map((gradientDirection) => {
@@ -31,7 +31,7 @@ export function TextColorGradient() {
                 value={currentGradientDirection.label}
             >
                 <SelectTrigger id="select-text-font-size">
-                    <SelectValue placeholder="Select font" />
+                    <SelectValue placeholder="Gradient Direction" />
                 </SelectTrigger>
                 <SelectContent>
                     {renderOptions()}

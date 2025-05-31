@@ -6,10 +6,10 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { useAtom } from 'jotai'
-import { colorType } from '@/atoms/text-tag-atoms'
+import { colorType } from '@/atoms/box-tag-atoms'
 import { Label } from "@/components/ui/label";
 
-export function TextColorType() {
+export function BoxColorType() {
     const [currentColorType, setCurrentColorType] = useAtom(colorType);
 
     return (
@@ -22,7 +22,7 @@ export function TextColorType() {
                 value={currentColorType}
             >
                 <SelectTrigger id="select-text-font-size">
-                    <SelectValue placeholder="Select font" />
+                    <SelectValue placeholder="Color Type" />
                 </SelectTrigger>
                 <SelectContent>
                     <SelectItem key={"Solid"} value={"Solid"}>Solid</SelectItem>

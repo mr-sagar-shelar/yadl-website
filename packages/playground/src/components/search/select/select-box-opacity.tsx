@@ -6,32 +6,32 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { useAtom } from 'jotai'
-import { FontSizes } from "@/components/constants";
-import { fontSize } from '@/atoms/text-tag-atoms'
+import { Opacity } from "@/components/constants";
+import { opacity } from '@/atoms/box-tag-atoms'
 import { Label } from "@/components/ui/label";
 
-export function TextFontSize() {
-    const [currentFontSize, setCurrentFontSize] = useAtom(fontSize);
+export function BoxBorderOpacity() {
+    const [currentOpacity, setCurrentOpacity] = useAtom(opacity);
     const renderOptions = () => {
-        return FontSizes.map((fontSize) => {
-            return <SelectItem key={fontSize.key} value={fontSize.label}>{fontSize.label}</SelectItem>
+        return Opacity.map((opacity) => {
+            return <SelectItem key={opacity.key} value={opacity.label}>{opacity.label}</SelectItem>
         })
     }
 
     return (
         <div className="grid gap-3">
-            <Label htmlFor="select-text-font-size">Font Size:</Label>
+            <Label htmlFor="select-text-font-size">Opacity:</Label>
             <Select
                 onValueChange={(value: string) => {
-                    const foundFontSize = FontSizes.find(fontSize => fontSize.label == value);
+                    const foundFontSize = Opacity.find(opacity => opacity.label == value);
                     if (foundFontSize) {
-                        setCurrentFontSize(foundFontSize);
+                        setCurrentOpacity(foundFontSize);
                     }
                 }}
-                value={currentFontSize.label}
+                value={currentOpacity.label}
             >
                 <SelectTrigger id="select-text-font-size">
-                    <SelectValue placeholder="Select font" />
+                    <SelectValue placeholder="Opacity" />
                 </SelectTrigger>
                 <SelectContent>
                     {renderOptions()}

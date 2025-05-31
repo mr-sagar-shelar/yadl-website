@@ -9,9 +9,12 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { TextFontSize } from "@/components/search/select/select-text-font-size";
-import { TextColorType } from "@/components/search/select/select-text-color-type";
-import { TextColorGradient } from "@/components/search/select/select-text-color-gradient-direction";
+import { BoxBorderRadius } from "@/components/search/select/select-box-border-radius";
+import { BoxBorderSize } from "@/components/search/select/select-box-border-size";
+import { BoxBorderStyle } from "@/components/search/select/select-box-border-style";
+import { BoxColorGradient } from "@/components/search/select/select-box-color-gradient-direction";
+import { BoxColorType } from "@/components/search/select/select-box-color-type";
+import { BoxBorderOpacity } from "@/components/search/select/select-box-opacity";
 import { useAtom } from 'jotai'
 import { userClasses, colorType } from '@/atoms/box-tag-atoms'
 
@@ -50,9 +53,12 @@ export function ConfigureBoxDialog(props: ConfigureTextProps) {
                         />
                     </div>
                     <div className="flex flex-wrap gap-5 pb-5">
-                        <TextFontSize />
-                        <TextColorType />
-                        {currentColorType == "Gradient" && <TextColorGradient />}
+                        <BoxBorderRadius />
+                        <BoxBorderSize />
+                        <BoxBorderStyle />
+                        <BoxColorType />
+                        <BoxBorderOpacity />
+                        {currentColorType == "Gradient" && <BoxColorGradient />}
                     </div>
                 </div>
                 <DialogFooter>
