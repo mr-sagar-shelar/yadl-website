@@ -15,51 +15,26 @@ import {
 } from "@/components/ui/menubar"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useAtom } from 'jotai'
-import { codeVisible, searchShapesVisible } from '@/atoms/application-config-atoms'
+import { codeVisible, searchShapesVisible, previewTheme } from '@/atoms/application-config-atoms'
+import { ThemeNames } from "@/components/constants/ThemeNames";
 
 export function HeaderMenu() {
     const [isCodeVisible, setCodeVisible] = useAtom(codeVisible);
     const [isSearchShapesVisible, setSearchShapesVisible] = useAtom(searchShapesVisible);
-    const themeNames = [
-        "Light",
-        "Dark",
-        "Cupcake",
-        "Bumblebee",
-        "Emerald",
-        "Corporate",
-        "Synthwave",
-        "Retro",
-        "Cyberpunk",
-        "Valentine",
-        "Halloween",
-        "Harden",
-        "Forest",
-        "Aqua",
-        "Lofi",
-        "Pastel",
-        "Fantasy",
-        "Wireframe",
-        "Black",
-        "Luxury",
-        "Dracula",
-        "Cmyk",
-        "Autumn",
-        "Ausiness",
-        "Acid",
-        "Lemonade",
-        "Night",
-        "Coffee",
-        "Winter",
-        "Dim",
-        "Nord",
-        "Sunset",
-        "Caramellatte",
-        "Abyss",
-        "Silk"
-    ];
+    const [currentPreviewTheme, setPreviewTheme] = useAtom(previewTheme);
 
     const renderThemeNames = () => {
-        return themeNames.map(theme => <MenubarRadioItem key={theme} value={theme}>{theme}</MenubarRadioItem>)
+        return ThemeNames.map(theme =>
+            <MenubarRadioItem
+                key={theme.value}
+                value={theme.title}
+                onClick={() => {
+                    setPreviewTheme(theme)
+                }}
+            >
+                {theme.title}
+            </MenubarRadioItem>
+        )
     }
 
     return (
@@ -141,7 +116,9 @@ export function HeaderMenu() {
                 <MenubarTrigger>Theme</MenubarTrigger>
                 <MenubarContent>
                     <ScrollArea className="h-72 w-48">
-                        <MenubarRadioGroup value="Light">
+                        <MenubarRadioGroup
+                            value={currentPreviewTheme.title}
+                        >
                             {renderThemeNames()}
                         </MenubarRadioGroup>
                     </ScrollArea>

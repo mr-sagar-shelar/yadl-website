@@ -7,14 +7,14 @@ import {
 import { Preview } from "yadl-preview";
 // import { AppSidebar } from "@/components/app-sidebar";
 import { SearchComponents } from "@/components/search/search-components";
-import { useTheme } from "./theme-provider";
-import { useAtom } from 'jotai'
+import { useAtom, useAtomValue } from 'jotai'
 import { codeVisible, searchShapesVisible } from '@/atoms/application-config-atoms'
+import { previewTheme } from '@/atoms/application-config-atoms'
 
 export default function PlaygroundContent() {
-    const { theme } = useTheme();
     const [isCodeVisible] = useAtom(codeVisible);
     const [isSearchShapesVisible] = useAtom(searchShapesVisible);
+    const currentPreviewTheme = useAtomValue(previewTheme)
     return (
         <div
             className="w-screen h-screen"
@@ -33,7 +33,7 @@ export default function PlaygroundContent() {
                 </>
                 }
                 <ResizablePanel defaultSize={50} minSize={40}>
-                    <div data-theme={theme} className="flex h-full">
+                    <div data-theme={currentPreviewTheme.value} className="flex h-full">
                         <Preview
                             initialNodes={[]}
                             initialEdges={[]}
