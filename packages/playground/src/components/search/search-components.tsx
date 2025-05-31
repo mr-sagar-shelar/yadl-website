@@ -19,7 +19,8 @@ import SearchGcpIcons from "./search-gcp-icons";
 import SearchTextComponents from "./search-text-components";
 import SearchBoxComponents from "./search-box-components";
 import SearchAvatars from "./search-avatars";
-import { ConfigureText } from "./dialogs/configure-text-dialog";
+import { ConfigureTextDialog } from "./dialogs/configure-text-dialog";
+import { ConfigureBoxDialog } from "./dialogs/configure-box-dialog";
 import { useState } from "react";
 
 
@@ -184,7 +185,8 @@ const data = {
 }
 
 export function SearchComponents() {
-  let [configureTextDialogOpen, setConfigureTexDialogOpen] = useState<boolean>(false);
+  let [configureTextDialogOpen, setConfigureTextDialogOpen] = useState<boolean>(false);
+  let [configureBoxDialogOpen, setConfigureBoxDialogOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -270,7 +272,7 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Text
-                    <Cog onClick={(event) => { setConfigureTexDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Cog onClick={(event) => { setConfigureTextDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
                     <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
@@ -288,7 +290,7 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Box
-                    <Pencil className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Cog onClick={(event) => { setConfigureBoxDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
                     <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
@@ -349,7 +351,8 @@ export function SearchComponents() {
           <Plus /> More Shapes
         </Button>
       </div> */}
-      <ConfigureText onStatusChange={(isOpen) => { setConfigureTexDialogOpen(isOpen) }} isOpen={configureTextDialogOpen} />
+      <ConfigureTextDialog onStatusChange={(isOpen) => { setConfigureTextDialogOpen(isOpen) }} isOpen={configureTextDialogOpen} />
+      <ConfigureBoxDialog onStatusChange={(isOpen) => { setConfigureBoxDialogOpen(isOpen) }} isOpen={configureBoxDialogOpen} />
     </>
   )
 }

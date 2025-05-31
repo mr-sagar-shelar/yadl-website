@@ -21,7 +21,7 @@ interface ConfigureTextProps {
     onStatusChange: (isOpen: boolean) => void;
 }
 
-export function ConfigureTextDialog(props: ConfigureTextProps) {
+export function ConfigureText(props: ConfigureTextProps) {
     const [currentUserText, setCurrentUserText] = useAtom(userText);
     const [currentClasses, setCurrentClasses] = useAtom(userClasses);
     const [currentFontFamily, setCurrentFontFamily] = useAtom(fontFamily);
