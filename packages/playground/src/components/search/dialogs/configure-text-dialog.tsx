@@ -10,8 +10,10 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { TextFontSize } from "@/components/search/select/select-text-font-size";
+import { TextColorType } from "@/components/search/select/select-text-color-type";
+import { TextColorGradient } from "@/components/search/select/select-text-color-gradient-direction";
 import { useAtom } from 'jotai'
-import { userText, userClasses, fontFamily } from '@/atoms/text-tag-atoms'
+import { userText, userClasses, fontFamily, colorType } from '@/atoms/text-tag-atoms'
 import FontPicker from "react-fontpicker-ts";
 
 interface ConfigureTextProps {
@@ -23,6 +25,7 @@ export function ConfigureText(props: ConfigureTextProps) {
     const [currentUserText, setCurrentUserText] = useAtom(userText);
     const [currentClasses, setCurrentClasses] = useAtom(userClasses);
     const [currentFontFamily, setCurrentFontFamily] = useAtom(fontFamily);
+    const [currentColorType] = useAtom(colorType);
 
     return (
         <Dialog
@@ -70,6 +73,8 @@ export function ConfigureText(props: ConfigureTextProps) {
                     </div>
                     <div className="flex flex-wrap gap-5 pb-5">
                         <TextFontSize />
+                        <TextColorType />
+                        {currentColorType == "Gradient" && <TextColorGradient />}
                     </div>
                 </div>
                 <DialogFooter>
