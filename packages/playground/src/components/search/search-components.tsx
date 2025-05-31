@@ -19,7 +19,7 @@ import SearchGcpIcons from "./search-gcp-icons";
 import SearchTextComponents from "./search-text-components";
 import SearchBoxComponents from "./search-box-components";
 import SearchAvatars from "./search-avatars";
-import { ConfigureText } from "../configure-text-dialog";
+import { ConfigureText } from "./dialogs/configure-text-dialog";
 import { useState } from "react";
 
 

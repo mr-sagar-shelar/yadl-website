@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-collapsible": "^1.1.11",
     "@radix-ui/react-dialog": "^1.1.14",
@@ -29,10 +30,12 @@
     "clsx": "^2.1.1",
     "daisyui": "^5.0.28",
     "date-fns": "^3.6.0",
+    "jotai": "^2.12.5",
     "lucide-react": "^0.511.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fontpicker-ts": "^1.2.0",
+    "react-hook-form": "^7.56.4",
     "react-resizable-panels": "^3.0.2",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.7",
@@ -43,7 +46,8 @@
     "yadl-gcp-icons": "^1.0.6",
     "yadl-preview": "file:../../../../i2p/yadl-ui/packages/yadl-preview",
     "yadl-skill-icons": "^1.0.6",
-    "yadl-ui-components": "file:../../../../i2p/yadl-ui/packages/yadl-ui-components"
+    "yadl-ui-components": "file:../../../../i2p/yadl-ui/packages/yadl-ui-components",
+    "zod": "^3.25.42"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

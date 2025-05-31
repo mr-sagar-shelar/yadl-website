@@ -7,14 +7,17 @@ import { useDnD } from "yadl-preview";
 import FontPicker from "react-fontpicker-ts";
 import "react-fontpicker-ts/dist/index.css";
 import { GradientDirection, FontSizes } from "@/components/constants";
+import { useAtom } from 'jotai'
+import { fontSize } from '@/atoms/text-tag-atoms'
 
 const SearchTextComponents = () => {
     const [currentFont, setCurrentFont] = useState<string>("Audiowide");
     const [currentText, setCurrentText] = useState<string>("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-    const [currentFontSize, setCurrentFontSize] = useState<string>("text-2xl");
+    const [_currentFontSize, setCurrentFontSize] = useState<string>("text-2xl");
     const [currentBackgroundType, setBackgroundType] = useState<string>("Solid");
     const [currentGradientDirection, setCurrentGradientDirection] = useState<string>(GradientDirection[0].key);
     const [currentCustomStyle, setCustomStyles] = useState<string>("");
+    const [currentFontSize] = useAtom(fontSize);
 
 
     const [_, setType] = useDnD();
@@ -38,7 +41,7 @@ const SearchTextComponents = () => {
                                 type: "text",
                                 data: {
                                     icon: `${key}`,
-                                    classes: `text-wrap ${textDetails.classes} ${currentFontSize}${currentBackgroundType == "Gradient" ? " " + currentGradientDirection : ""} ${currentCustomStyle}`,
+                                    classes: `text-wrap ${textDetails.classes} ${currentFontSize.key}${currentBackgroundType == "Gradient" ? " " + currentGradientDirection : ""} ${currentCustomStyle}`,
                                     text: currentText,
                                     fontFamily: currentFont,
                                     props: textDetails.props,
@@ -50,7 +53,7 @@ const SearchTextComponents = () => {
                     >
                         <Text
                             text={currentText}
-                            classes={`${textDetails.classes} ${currentFontSize}${currentBackgroundType == "Gradient" ? " " + currentGradientDirection : ""} ${currentCustomStyle}`}
+                            classes={`${textDetails.classes} ${currentFontSize.key}${currentBackgroundType == "Gradient" ? " " + currentGradientDirection : ""} ${currentCustomStyle}`}
                         />
                     </div>
                 );
@@ -137,7 +140,7 @@ const SearchTextComponents = () => {
                 </div>
                 <div
                     style={{ fontFamily: currentFont }}
-                    className={`grid grid-cols-1 overflow-auto w-full h-full ${currentFontSize}`}
+                    className={`grid grid-cols-1 overflow-auto w-full h-full ${currentFontSize.key}`}
                 >
                     {TextComponent}
                 </div>

@@ -7,10 +7,10 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { TextFontSize } from "@/components/search/select/select-text-font-size";
 
 interface ConfigureTextProps {
     isOpen: boolean;
@@ -34,7 +34,7 @@ export function ConfigureText(props: ConfigureTextProps) {
                         </DialogDescription>
                     </DialogHeader>
                     <div className="flex flex-wrap">
-
+                        <TextFontSize />
                     </div>
                     <div className="grid gap-4">
                         <div className="grid gap-3">
