@@ -8,9 +8,13 @@ import { Preview } from "yadl-preview";
 // import { AppSidebar } from "@/components/app-sidebar";
 import { SearchComponents } from "@/components/search/search-components";
 import { useTheme } from "./theme-provider";
+import { useAtom } from 'jotai'
+import { codeVisible, searchShapesVisible } from '@/atoms/application-config-atoms'
 
 export default function PlaygroundContent() {
     const { theme } = useTheme();
+    const [isCodeVisible] = useAtom(codeVisible);
+    const [isSearchShapesVisible] = useAtom(searchShapesVisible);
     return (
         <div
             className="w-screen h-screen"
@@ -19,12 +23,15 @@ export default function PlaygroundContent() {
                 direction="horizontal"
                 className="w-full h-screen"
             >
-                <ResizablePanel defaultSize={25} minSize={10}>
-                    <div className="flex h-full items-center justify-center p-2">
-                        <span className="font-semibold">Code</span>
-                    </div>
-                </ResizablePanel>
-                <ResizableHandle withHandle />
+                {isCodeVisible && <>
+                    <ResizablePanel defaultSize={25} minSize={10}>
+                        <div className="flex h-full items-center justify-center p-2">
+                            <span className="font-semibold">Code</span>
+                        </div>
+                    </ResizablePanel>
+                    <ResizableHandle withHandle />
+                </>
+                }
                 <ResizablePanel defaultSize={50} minSize={40}>
                     <div data-theme={theme} className="flex h-full">
                         <Preview
@@ -51,12 +58,14 @@ export default function PlaygroundContent() {
                         />
                     </div>
                 </ResizablePanel>
-                <ResizableHandle withHandle />
-                <ResizablePanel defaultSize={25} minSize={10}>
-                    <div className="flex h-full justify-center">
-                        <SearchComponents />
-                    </div>
-                </ResizablePanel>
+                {isSearchShapesVisible && <>
+                    <ResizableHandle withHandle />
+                    <ResizablePanel defaultSize={25} minSize={10}>
+                        <div className="flex h-full justify-center">
+                            <SearchComponents />
+                        </div>
+                    </ResizablePanel>
+                </>}
             </ResizablePanelGroup>
         </div>
     )

@@ -14,8 +14,12 @@ import {
     MenubarTrigger,
 } from "@/components/ui/menubar"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { useAtom } from 'jotai'
+import { codeVisible, searchShapesVisible } from '@/atoms/application-config-atoms'
 
 export function HeaderMenu() {
+    const [isCodeVisible, setCodeVisible] = useAtom(codeVisible);
+    const [isSearchShapesVisible, setSearchShapesVisible] = useAtom(searchShapesVisible);
     const themeNames = [
         "Light",
         "Dark",
@@ -108,8 +112,16 @@ export function HeaderMenu() {
             <MenubarMenu>
                 <MenubarTrigger>View</MenubarTrigger>
                 <MenubarContent>
-                    <MenubarCheckboxItem checked>Code</MenubarCheckboxItem>
-                    <MenubarCheckboxItem checked>
+                    <MenubarCheckboxItem
+                        checked={isCodeVisible}
+                        onClick={() => setCodeVisible(!isCodeVisible)}
+                    >
+                        Code
+                    </MenubarCheckboxItem>
+                    <MenubarCheckboxItem
+                        checked={isSearchShapesVisible}
+                        onClick={() => setSearchShapesVisible(!isSearchShapesVisible)}
+                    >
                         Shapes
                     </MenubarCheckboxItem>
                     <MenubarSeparator />
