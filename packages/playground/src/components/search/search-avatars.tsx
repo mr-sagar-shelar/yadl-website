@@ -3,7 +3,7 @@ import { memo } from "react";
 import { Avatar, AvatarNames } from "yadl-avatar";
 import type { DragDropProps } from "yadl-preview";
 import { useDnD } from "yadl-preview";
-import { AvatarTopStyle, AccessoriesType, HairColor, FacialHairType, ClotheType, EyeType, EyebrowType, MouthType, SkinColor, CONSTANTS } from "../constants";
+import { AvatarTopType, AccessoriesType, HairColor, FacialHairType, ClotheType, EyeType, EyebrowType, MouthType, SkinColor, CONSTANTS } from "../constants";
 import type { AvatarProps } from "yadl-avatar/dist/components/AvatarComponent";
 import {
     HoverCard,
@@ -31,7 +31,7 @@ const SearchAvatars = () => {
     };
 
     const renderTopOptions = () => {
-        return AvatarTopStyle.map((item) => {
+        return AvatarTopType.map((item) => {
             return <option key={item.label}>{item.label}</option>
         })
     }

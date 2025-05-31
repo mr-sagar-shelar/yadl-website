@@ -1,14 +1,39 @@
 import { atomWithStorage } from 'jotai/utils';
 
-export const fontSize = atomWithStorage("text-font-size", {
-    key: "text-2xl",
-    label: "2XL"
+export const avatarStyle = atomWithStorage("avatar-top-type", "Solid");
+export const topType = atomWithStorage("avatar-font-size", {
+    key: "LongHairStraight",
+    label: "LongHairStraight"
 });
-export const gradientDirection = atomWithStorage("text-color-gradient-direction", {
-    "key": "bg-linear-to-t",
-    "label": "TOP"
+export const accessoriesType = atomWithStorage("avatar-accessories-type", {
+    "key": "Blank",
+    "label": "Blank"
 });
-export const userText = atomWithStorage("text-user-text", "Lorem ipsum dolor sit amet");
-export const userClasses = atomWithStorage("text-user-classes", "");
-export const colorType = atomWithStorage("text-color-type", "Solid");
-export const fontFamily = atomWithStorage("text-font-family", "Audiowide");
+export const hairColor = atomWithStorage("avatar-hair-color", {
+    "key": "Auburn",
+    "label": "Auburn"
+});
+export const facialHairType = atomWithStorage("avatar-facial-hair-color", {
+    "key": "Blank",
+    "label": "Blank"
+});
+export const clotheType = atomWithStorage("avatar-cloth-type", {
+    "key": "BlazerShirt",
+    "label": "BlazerShirt"
+});
+export const eyeType = atomWithStorage("avatar-eye-type", {
+    "key": "Default",
+    "label": "Default"
+});
+export const eyebrowType = atomWithStorage("avatar-eyebrow-type", {
+    "key": "Default",
+    "label": "Default"
+});
+export const mouthType = atomWithStorage("avatar-mouth-type", {
+    "key": "Default",
+    "label": "Default"
+});
+export const skinColor = atomWithStorage("avatar-skin-color", {
+    "key": "Yellow",
+    "label": "Yellow"
+});

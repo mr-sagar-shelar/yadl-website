@@ -1,4 +1,4 @@
-import { Minus, Plus, Pencil, Cog } from "lucide-react"
+import { Minus, Plus, Cog } from "lucide-react"
 import { SearchForm } from "@/components/search/search-form"
 import {
   Collapsible,
@@ -21,6 +21,7 @@ import SearchBoxComponents from "./search-box-components";
 import SearchAvatars from "./search-avatars";
 import { ConfigureTextDialog } from "./dialogs/configure-text-dialog";
 import { ConfigureBoxDialog } from "./dialogs/configure-box-dialog";
+import { ConfigureAvatarDialog } from "./dialogs/configure-avatar-dialog";
 import { useState } from "react";
 
 
@@ -187,6 +188,7 @@ const data = {
 export function SearchComponents() {
   let [configureTextDialogOpen, setConfigureTextDialogOpen] = useState<boolean>(false);
   let [configureBoxDialogOpen, setConfigureBoxDialogOpen] = useState<boolean>(false);
+  let [configureAvatarDialogOpen, setConfigureAvatarDialogOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -308,7 +310,7 @@ export function SearchComponents() {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton>
                     Avatar
-                    <Pencil className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
+                    <Cog onClick={(event) => { setConfigureAvatarDialogOpen(true); event.preventDefault(); }} className="m-1 ml-auto hover:bg-primary hover:text-secondary" />
                     <Plus className="m-1 group-data-[state=open]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                     <Minus className="m-1 group-data-[state=closed]/collapsible:hidden hover:bg-primary hover:text-secondary" />
                   </SidebarMenuButton>
@@ -353,6 +355,7 @@ export function SearchComponents() {
       </div> */}
       <ConfigureTextDialog onStatusChange={(isOpen) => { setConfigureTextDialogOpen(isOpen) }} isOpen={configureTextDialogOpen} />
       <ConfigureBoxDialog onStatusChange={(isOpen) => { setConfigureBoxDialogOpen(isOpen) }} isOpen={configureBoxDialogOpen} />
+      <ConfigureAvatarDialog onStatusChange={(isOpen) => { setConfigureAvatarDialogOpen(isOpen) }} isOpen={configureAvatarDialogOpen} />
     </>
   )
 }

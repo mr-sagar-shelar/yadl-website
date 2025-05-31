@@ -802,7 +802,7 @@ export const GradientDirection = [
     }
 ];
 
-export const AvatarTopStyle = [
+export const AvatarTopType = [
     {
         key: 'NoHair',
         label: "NoHair"
