@@ -18,6 +18,7 @@
     "update-theme": "node ./scripts/themeUpdate.js",
     "format": "prettier -w .",
     "copy:playground-assets": "shx cp -fr ./packages/yadl-playground/dist/assets ./static",
+    "copy:playground-assets1": "shx cp -fr ../../i2p/yadl-client-ts/dist/assets ./static",
     "copy:coi-serviceworker": "shx cp -f ./node_modules/coi-serviceworker/coi-serviceworker.js ./public/coi-serviceworker.js"
   },
   "devDependencies": {
