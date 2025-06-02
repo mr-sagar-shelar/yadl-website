@@ -31,18 +31,6 @@ draft: false
       position: { x : 150 y : 10 }
       icon : skillIconBabel
 />
-<Themeisle
-      id : "Themeisle1"
-      dimension: { height : 50 width : 50 }
-      position: { x : 200 y : 10 }
-      icon : themeisle101
-/>
-<Undraw
-      id : "Undraw1"
-      dimension: { height : 50 width : 50 }
-      position: { x : 250 y : 10 }
-      icon : undrawADayOff
-/>
 <Author
       id : "Author1"
       fontFamily : "Sarif"
