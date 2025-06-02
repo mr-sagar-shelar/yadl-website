@@ -11,7 +11,7 @@ name = "Showcase"
 pageRef = "/showcase"
 weight = 3
 
-[[main]]
-name = "Docs"
-pageRef = "/docs"
-weight = 2
+# [[main]]
+# name = "Docs"
+# pageRef = "/docs"
+# weight = 2
