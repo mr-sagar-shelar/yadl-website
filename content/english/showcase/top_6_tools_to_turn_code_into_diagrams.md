@@ -2,7 +2,6 @@
 title: "Top 6 Tools to Turn Code into Diagrams"
 meta_title: ""
 description: "Top 6 Tools to Turn Code into Diagrams"
-date: 2025-04-04T05:00:00Z
 image: "/images/Diagram3.gif"
 categories: ["Software"]
 author: "Sagar Shelar"
@@ -37,14 +36,17 @@ draft: false
       position: { x : 150 y : 10 }
       icon : skillIconBabel
 />
-<Author
-      id : "Author1"
-      fontFamily : "Sarif"
-      profileHandle : "@Sagar"
-      profilePic : "https://www.google.com"
-      classes : ""
-      dimension: { height : 10 width : 10 }
-      position: { x : 10 y : 10 }
+<Author src: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80" 
+      position: { x: -5 y: -102 } 
+      dimension: { width: 221 height: 85 }
+      classes: "shrink-0 group block flex items-center gap-4 bg-base-300 rounded-2xl p-2"
+      name: "John Doe" 
+      caption: "Frontend Engineer" 
+      nameClasses: "text-base-content text-xl font-semibold"
+      captionClasses: "text-base-content/50 text-sm"
+      imageClasses: "inline-block relative object-cover object-center !rounded-full border border-warning p-0.5" 
+      nameFontFamily: "ADLaM Display"
+      captionFontFamily: "Agbalumo"
 />
 <Avatar
         id : "Avatar1"
