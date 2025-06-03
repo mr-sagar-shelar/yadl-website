@@ -1,4 +1,4 @@
-import{r as a,W as A,j as o,C as h}from"./index.js";import{H as C,a as M,b as w}from"./hover-card.js";var m={exports:{}},r={};/**
+import{r as a,q as A,j as o,C as h}from"./index.js";import{H as C,a as M,b as w}from"./hover-card.js";var m={exports:{}},r={};/**
  * @license React
  * react-jsx-runtime.production.js
  *
