@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "@xyflow/react": "^12.6.4",
-    "allotment": "^1.20.3",
     "daisyui": "^5.0.37",
     "lodash": "^4.17.21",
     "react": "^19.1.0",
