@@ -11,6 +11,6 @@
 - `npm run build`
 
 ## In 'yadl-website'
-- copy `yadl-server-worker.js` to `static` folder
+- copy `yadl-server-worker.js` to `./static/worker` folder
 - `npm run copy:playground-assets1`
 - `npm run build`
