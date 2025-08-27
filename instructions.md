@@ -1,8 +1,8 @@
 ## 🎁 How to build
 
-## In editor
-- change `"yadl-client-ts/monaco-editor-workers/workers",` to `"/monaco-editor-workers/workers",`
-- change `worker: "yadl-client-ts/worker/yadl-server-worker.js",` to `worker: "/worker/yadl-server-worker.js",`
+## In yadl-ui/packages/yadl-editor-core/yadl-editor/src/components/Editor.tsx
+- change line 25 `"yadl-client-ts/monaco-editor-workers/workers",` to `"/monaco-editor-workers/workers",`
+- change line 62 `worker: "yadl-client-ts/worker/yadl-server-worker.js",` to `worker: "/worker/yadl-server-worker.js",`
 - `npm run build:editor`
 
 ## In 'yadl-client-ts'
